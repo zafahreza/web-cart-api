@@ -1,0 +1,948 @@
+{
+	"info": {
+		"_postman_id": "01a8e1a7-8071-4d88-a28c-2a821c3d45e8",
+		"name": "Web Cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25415744"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"admin\",\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SignUp",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"admin\",\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 12:57:18 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "168"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"id\": 0,\n        \"name\": \"admin\",\n        \"username\": \"admin\",\n        \"created_at\": \"0001-01-01T00:00:00Z\",\n        \"updated_at\": \"0001-01-01T00:00:00Z\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 12:57:39 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "289"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"admin\",\n        \"username\": \"admin\",\n        \"created_at\": \"2024-05-04T19:57:18.467+07:00\",\n        \"updated_at\": \"2024-05-04T19:57:18.467+07:00\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/fetch",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"fetch"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/fetch",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"fetch"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 12:59:01 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "186"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"admin\",\n        \"username\": \"admin\",\n        \"created_at\": \"2024-05-04T19:57:18.467+07:00\",\n        \"updated_at\": \"2024-05-04T19:57:18.467+07:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mn0.OGaRDBas8cGddS7zQxEgjcR33dDWb9h_oqqxwydmvh0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products?r=q",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "r",
+							"value": "q"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "keyword",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 12:59:44 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1712"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"products\": [\n            {\n                \"id\": 1,\n                \"name\": \"RTX 3060\",\n                \"description\": \"vga card\",\n                \"category\": \"vga\",\n                \"price\": 80000,\n                \"picture\": \"3060.jpg\",\n                \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"RTX 4090\",\n                \"description\": \"vga nvidia\",\n                \"category\": \"vga\",\n                \"price\": 120000,\n                \"picture\": \"4090.png\",\n                \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Ryzen 5 5600\",\n                \"description\": \"Procesor AMD\",\n                \"category\": \"procesor\",\n                \"price\": 40000,\n                \"picture\": \"ryzen5.jpg\",\n                \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Intel i5\",\n                \"description\": \"procesor intel\",\n                \"category\": \"procesor\",\n                \"price\": 45000,\n                \"picture\": \"i5.jpg\",\n                \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Motherboard\",\n                \"description\": \"motherboard asus\",\n                \"category\": \"motherboard\",\n                \"price\": 60000,\n                \"picture\": \"motherboard.png\",\n                \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Ram DDR5\",\n                \"description\": \"random access memory\",\n                \"category\": \"ram\",\n                \"price\": 30000,\n                \"picture\": \"ram.jpg\",\n                \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n            },\n            {\n                \"id\": 7,\n                \"name\": \"SSD Nvme\",\n                \"description\": \"storage ssd tipe nvme\",\n                \"category\": \"storage\",\n                \"price\": 25000,\n                \"picture\": \"ssd.jpg\",\n                \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"PSU 750W\",\n                \"description\": \"power suply\",\n                \"category\": \"psu\",\n                \"price\": 20000,\n                \"picture\": \"psu.jpg\",\n                \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n            }\n        ],\n        \"count\": 8\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Product By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Product By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 13:00:26 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "247"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"RTX 3060\",\n        \"description\": \"vga card\",\n        \"category\": \"vga\",\n        \"price\": 80000,\n        \"picture\": \"3060.jpg\",\n        \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n        \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/carts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Product By ID Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/carts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 13:00:56 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "76"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"carts\": [],\n        \"count\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Add product to cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\": 2,\r\n    \"product_count\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/carts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add product to cart",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": 2,\r\n    \"product_count\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/carts",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 13:01:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/carts/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carts",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Orders",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/carts/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"carts",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 13:02:30 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart_ids\":[\r\n        1,2\r\n    ],\r\n    \"coupon_id\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cart_ids\":[\r\n        2,3\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 13:04:28 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1087"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"user_id\": 1,\n        \"coupon_id\": 0,\n        \"total_before_discount\": 280000,\n        \"discount\": 0,\n        \"total_after_discount\": 280000,\n        \"status\": \"Open\",\n        \"status_confirmation\": \"Pending\",\n        \"order_coupon_received\": 2,\n        \"product_coupon_received\": 2,\n        \"order_items\": [\n            {\n                \"id\": 1,\n                \"order_id\": 1,\n                \"product_id\": 2,\n                \"product\": {\n                    \"id\": 2,\n                    \"name\": \"RTX 4090\",\n                    \"description\": \"vga nvidia\",\n                    \"category\": \"vga\",\n                    \"price\": 120000,\n                    \"picture\": \"4090.png\",\n                    \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                    \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n                },\n                \"product_count\": 1,\n                \"note\": \"\",\n                \"created_at\": \"2024-05-04T20:04:28.68+07:00\",\n                \"updated_at\": \"2024-05-04T20:04:28.68+07:00\"\n            },\n            {\n                \"id\": 2,\n                \"order_id\": 1,\n                \"product_id\": 1,\n                \"product\": {\n                    \"id\": 1,\n                    \"name\": \"RTX 3060\",\n                    \"description\": \"vga card\",\n                    \"category\": \"vga\",\n                    \"price\": 80000,\n                    \"picture\": \"3060.jpg\",\n                    \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                    \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n                },\n                \"product_count\": 2,\n                \"note\": \"\",\n                \"created_at\": \"2024-05-04T20:04:28.68+07:00\",\n                \"updated_at\": \"2024-05-04T20:04:28.68+07:00\"\n            }\n        ],\n        \"created_at\": \"2024-05-04T20:04:28.679+07:00\",\n        \"updated_at\": \"2024-05-04T20:04:28.679+07:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Order",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 13:05:29 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1110"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"orders\": [\n            {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"coupon_id\": 0,\n                \"total_before_discount\": 280000,\n                \"discount\": 0,\n                \"total_after_discount\": 280000,\n                \"status\": \"Open\",\n                \"status_confirmation\": \"Pending\",\n                \"order_coupon_received\": 2,\n                \"product_coupon_received\": 2,\n                \"order_items\": [\n                    {\n                        \"id\": 1,\n                        \"order_id\": 1,\n                        \"product_id\": 2,\n                        \"product\": {\n                            \"id\": 2,\n                            \"name\": \"RTX 4090\",\n                            \"description\": \"vga nvidia\",\n                            \"category\": \"vga\",\n                            \"price\": 120000,\n                            \"picture\": \"4090.png\",\n                            \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                            \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n                        },\n                        \"product_count\": 1,\n                        \"note\": \"\",\n                        \"created_at\": \"2024-05-04T20:04:28.68+07:00\",\n                        \"updated_at\": \"2024-05-04T20:04:28.68+07:00\"\n                    },\n                    {\n                        \"id\": 2,\n                        \"order_id\": 1,\n                        \"product_id\": 1,\n                        \"product\": {\n                            \"id\": 1,\n                            \"name\": \"RTX 3060\",\n                            \"description\": \"vga card\",\n                            \"category\": \"vga\",\n                            \"price\": 80000,\n                            \"picture\": \"3060.jpg\",\n                            \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                            \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n                        },\n                        \"product_count\": 2,\n                        \"note\": \"\",\n                        \"created_at\": \"2024-05-04T20:04:28.68+07:00\",\n                        \"updated_at\": \"2024-05-04T20:04:28.68+07:00\"\n                    }\n                ],\n                \"created_at\": \"2024-05-04T20:04:28.679+07:00\",\n                \"updated_at\": \"2024-05-04T20:04:28.679+07:00\"\n            }\n        ],\n        \"count\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Orders By ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/orders/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Orders By ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/orders/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 13:06:04 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1087"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"user_id\": 1,\n        \"coupon_id\": 0,\n        \"total_before_discount\": 280000,\n        \"discount\": 0,\n        \"total_after_discount\": 280000,\n        \"status\": \"Open\",\n        \"status_confirmation\": \"Pending\",\n        \"order_coupon_received\": 2,\n        \"product_coupon_received\": 2,\n        \"order_items\": [\n            {\n                \"id\": 1,\n                \"order_id\": 1,\n                \"product_id\": 2,\n                \"product\": {\n                    \"id\": 2,\n                    \"name\": \"RTX 4090\",\n                    \"description\": \"vga nvidia\",\n                    \"category\": \"vga\",\n                    \"price\": 120000,\n                    \"picture\": \"4090.png\",\n                    \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                    \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n                },\n                \"product_count\": 1,\n                \"note\": \"\",\n                \"created_at\": \"2024-05-04T20:04:28.68+07:00\",\n                \"updated_at\": \"2024-05-04T20:04:28.68+07:00\"\n            },\n            {\n                \"id\": 2,\n                \"order_id\": 1,\n                \"product_id\": 1,\n                \"product\": {\n                    \"id\": 1,\n                    \"name\": \"RTX 3060\",\n                    \"description\": \"vga card\",\n                    \"category\": \"vga\",\n                    \"price\": 80000,\n                    \"picture\": \"3060.jpg\",\n                    \"created_at\": \"2024-05-03T13:52:59.255+07:00\",\n                    \"updated_at\": \"2024-05-03T13:52:59.255+07:00\"\n                },\n                \"product_count\": 2,\n                \"note\": \"\",\n                \"created_at\": \"2024-05-04T20:04:28.68+07:00\",\n                \"updated_at\": \"2024-05-04T20:04:28.68+07:00\"\n            }\n        ],\n        \"created_at\": \"2024-05-04T20:04:28.679+07:00\",\n        \"updated_at\": \"2024-05-04T20:04:28.679+07:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update status order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"Confirmed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/orders/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update status order",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"Confirmed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/orders/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 13:09:47 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Coupons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MX0.pyIMSPEvXypEG71unnTrneozZ1p8DfGAddLOtxyDpHo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/coupons",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coupons"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Coupons",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/coupons",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"coupons"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 04 May 2024 13:10:32 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1077"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"message\": \"success\",\n    \"data\": {\n        \"coupons\": [\n            {\n                \"id\": 1,\n                \"user_id\": 1,\n                \"description\": \"discount 10 percent maksimum 10000 after order 1\",\n                \"discount_percentage\": 10,\n                \"minimum_payment\": 50000,\n                \"maximum_discount\": 10000,\n                \"created_at\": \"2024-05-04T20:09:47.504+07:00\",\n                \"updated_at\": \"2024-05-04T20:09:47.504+07:00\"\n            },\n            {\n                \"id\": 2,\n                \"user_id\": 1,\n                \"description\": \"discount 10 percent maksimum 10000 after order 1\",\n                \"discount_percentage\": 10,\n                \"minimum_payment\": 50000,\n                \"maximum_discount\": 10000,\n                \"created_at\": \"2024-05-04T20:09:47.504+07:00\",\n                \"updated_at\": \"2024-05-04T20:09:47.504+07:00\"\n            },\n            {\n                \"id\": 3,\n                \"user_id\": 1,\n                \"description\": \"discount 10 percent maksimum 10000 after order 1\",\n                \"discount_percentage\": 10,\n                \"minimum_payment\": 50000,\n                \"maximum_discount\": 10000,\n                \"created_at\": \"2024-05-04T20:09:47.504+07:00\",\n                \"updated_at\": \"2024-05-04T20:09:47.504+07:00\"\n            },\n            {\n                \"id\": 4,\n                \"user_id\": 1,\n                \"description\": \"discount 10 percent maksimum 10000 after order 1\",\n                \"discount_percentage\": 10,\n                \"minimum_payment\": 50000,\n                \"maximum_discount\": 10000,\n                \"created_at\": \"2024-05-04T20:09:47.504+07:00\",\n                \"updated_at\": \"2024-05-04T20:09:47.504+07:00\"\n            }\n        ],\n        \"count\": 4\n    }\n}"
+				}
+			]
+		}
+	]
+}
